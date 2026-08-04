@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title>Amanda Gabrielle — Link</title>
+<title>Amanda Gabrielle — Estudante de Psicologia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Amanda Gabrielle, estudante de Psicologia (USP) — descontos, redes e o que anda estudando." />
 <style>
@@ -388,8 +388,8 @@
 
   /* ---------- Phone showcase ---------- */
   .phone-showcase{ position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding-inline: 1.5rem; }
-  .phone-stage{ position: relative; display: flex; align-items: center; justify-content: center; min-height: 340px; padding-block: 2rem; }
-  @media (min-width: 640px){ .phone-stage{ min-height: 420px; padding-block: 2.5rem; } }
+  .phone-stage{ position: relative; display: flex; align-items: center; justify-content: center; min-height: 520px; padding-block: 3.5rem; }
+  @media (min-width: 640px){ .phone-stage{ min-height: 520px; padding-block: 3rem; } }
   @media (min-width: 860px){ .phone-stage{ min-height: 660px; padding-block: 3.5rem; } }
 
   .iphone{
@@ -441,13 +441,13 @@
   .ig-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; flex: 1; overflow: hidden; }
   .ig-cell{ position: relative; aspect-ratio: 1; overflow: hidden; background: #eee; }
   .ig-cell img{ width: 100%; height: 100%; object-fit: cover; display: block; }
-  .ig-cell svg{ position: absolute; bottom: 3px; right: 3px; width: 8px; height: 8px; color: #fff; filter: drop-shadow(0 1px 1px rgba(0,0,0,0.5)); }
+  .ig-cell svg{ position: absolute; bottom: 3px; right: 3px; width: 8px; height: 8px; color: #fff; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
   .ig-cell-more{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: var(--paper); color: var(--vinho); text-decoration: none; }
   .ig-cell-more svg{ position: static; width: 16px; height: 16px; filter: none; }
   .ig-cell-more span{ font-size: 0.36rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
 
   .float-card{
-    position: absolute; top: 50%; left: 50%; width: 84px; display: none; flex-direction: column; gap: 5px;
+    position: absolute; top: 50%; left: 50%; width: 56px; display: flex; flex-direction: column; gap: 3px;
     background: none; padding: 0; text-decoration: none; color: var(--paper);
     z-index: 3; opacity: 0;
     transform: translate(calc(-50% + var(--tx, 0px)), calc(-50% + var(--ty, 0px) + 44px)) rotate(var(--rot, 0deg)) scale(0.85);
@@ -471,9 +471,9 @@
     width: 26%; height: 18%; border-radius: 50%;
     background: rgba(255,255,255,0.7); filter: blur(1.5px);
   }
-  .float-card .fc-thumb svg{ position: relative; width: 20px; height: 20px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25)); }
+  .float-card .fc-thumb svg{ position: relative; width: 15px; height: 15px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25)); }
   .float-card:hover .fc-thumb{ animation-play-state: paused; filter: brightness(1.12); }
-  .float-card .fc-label{ font-size: 0.68rem; font-weight: 700; text-align: center; letter-spacing: 0.01em; text-shadow: 0 1px 3px rgba(0,0,0,0.45); }
+  .float-card .fc-label{ font-size: 0.55rem; font-weight: 700; text-align: center; letter-spacing: 0.01em; text-shadow: 0 1px 4px rgba(0,0,0,0.8); white-space: nowrap; }
   @keyframes bubble-bob{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-7px); } }
   .fc-1 .fc-thumb{ animation: bubble-bob 4.4s ease-in-out infinite; }
   .fc-2 .fc-thumb{ animation: bubble-bob 5.2s ease-in-out -1.4s infinite; }
@@ -483,8 +483,20 @@
   .fc-6 .fc-thumb{ animation: bubble-bob 5.0s ease-in-out -2.0s infinite; }
   .fc-7 .fc-thumb{ animation: bubble-bob 4.6s ease-in-out -1.0s infinite; }
   .fc-1{ transition-delay: .05s; } .fc-2{ transition-delay: .12s; } .fc-3{ transition-delay: .20s; } .fc-4{ transition-delay: .28s; } .fc-5{ transition-delay: .35s; } .fc-6{ transition-delay: .42s; } .fc-7{ transition-delay: .50s; }
+
+  /* Posicionamento mobile (< 640px) */
+  .fc-1{ --tx: -125px; --ty: -160px; --rot: -8deg; }
+  .fc-2{ --tx: -132px; --ty: 10px; --rot: 6deg; }
+  .fc-3{ --tx: 125px; --ty: -160px; --rot: 7deg; }
+  .fc-4{ --tx: 132px; --ty: 10px; --rot: -6deg; }
+  .fc-5{ --tx: -120px; --ty: 175px; --rot: 4deg; }
+  .fc-6{ --tx: 120px; --ty: 175px; --rot: -4deg; }
+  .fc-7{ --tx: 0px; --ty: -255px; --rot: -2deg; }
+
   @media (min-width: 640px){
-    .float-card{ display: flex; }
+    .float-card{ width: 84px; gap: 5px; }
+    .float-card .fc-thumb svg{ width: 20px; height: 20px; }
+    .float-card .fc-label{ font-size: 0.68rem; }
     .fc-3, .fc-5, .fc-6, .fc-7{ display: none; }
     .fc-1{ --tx: -168px; --ty: -105px; --rot: -8deg; }
     .fc-2{ --tx: -175px; --ty: 115px; --rot: 6deg; }
